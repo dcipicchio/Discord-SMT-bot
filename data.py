@@ -1,0 +1,27 @@
+# image path, level, resistances, race
+demon_info = {
+    'Lham Dearg': ['img/lham_dearg', 1, 'weak: ice, resist: gun and phys', 'Jaki'],
+    'Centaur': ['img/centaur', 1, 'weak: elec, resist: gun, null: ice', 'Yoma'],
+    'Fuxi': ['img/fuxi', 1, 'weak: gun, resist: force', 'Raptor'],
+    'Tangata Manu': ['img/tangata_manu', 2, 'weak: gun and elec, null: force', 'Flight'],
+    'Napaea': ['img/napaea', 2, 'weak: ice, resist: force', 'Fairy'],
+    'Mokoi': ['img/mokoi', 2, 'weak: force, null: elec', 'Night'],
+    'Slime': ['img/slime', 2, 'weak: gun, fire, ice, elec, force, light', 'Foul'],
+    'Hamsa': ['img/hamsa', 3, 'weak: gun, resist: elec', 'Avian'],
+    'Angel': ['img/angel', 3, 'weak: darkness, null: light', 'Divine'],
+    'Heqet': ['img/heqet', 3, 'weak: fire, resist: elec', 'Holy'],
+    'Gryphon': ['img/gryphon', 3, 'weak:gun, null: force', 'Beast'],
+    'Myrmecolion': ['img/myrmecolion', 3, 'weak: elec', 'Vermin'],
+    'Onmoraki': ['img/onmoraki', 3, 'weak: gun and ice', 'food'],
+    'Dwarf': ['img/dwarf', 4, 'weak: force, resist: fire', 'Jirae'],
+    'Dybbuk': ['img/dybbuk', 4, 'weak: ice and light, resist: darkness', 'Spirit'],
+    'Samurai Zombie M': ['img/samurai_zombie_m', 4, 'weak: fire and light, null: darkness', 'Undead'],
+    'Melcholm': ['img/melcholm', 5, 'weak: ice and force, resist: darkness, repel: fire', 'Fallen'],
+    'Grudge Horde': ['img/grudge_horde', 5, 'weak: fire and light, null: darkness', 'Horde'],
+    'Samurai Zombie F': ['img/samurai_zombie_f', 5, 'weak: fire and light, null: darkness', 'Undead'],
+    'Vodyanik': ['img/vodyanik', 6, 'weak: force, null: elec', 'Yoma'],
+    'Chagrin': ['img/chagrin', 6, 'weak: elec, repel: force', 'Wilder'],
+    'Pele': ['img/pele', 6, 'weak": ice, null: fire', 'Lady'],
+    'Strigoii': ['img/strigoii', 6, 'weak: fire and light, resist: elec, force, and darkness', 'Ghost'],
+    'Pixie': ['img/pixie', 7]
+}
