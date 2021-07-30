@@ -4,6 +4,7 @@ import json
 import test
 import random
 import data
+import bot_key
 
 client = discord.Client()
 
@@ -33,7 +34,9 @@ async def on_message(message):
 
     if msg.startswith('!summon'):
         summoned = summon(message)
-        await message.channel.send('You Summoned ' + summoned + '!')
+        info = data.demon_info[summoned]
+        lvl = info[1]
+        await message.channel.send('You Summoned a level ' + str(lvl) + ' ' + summoned + '!')
 
 
-client.run('ODYyMDA0NTYwNDc0Mjc1ODUx.YOSCTg.ywig6nu6lA-2GbR7Tp_a7yyBd4A')
+client.run(bot_key.key)
