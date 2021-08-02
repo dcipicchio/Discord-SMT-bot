@@ -3,6 +3,7 @@ This bot is currently designed around SMT 4, as this game is current the one wit
 useful information about the game into one place, as well as have features for fans of the franchise
 
 Planned Features/ potential ideas:
+
 Summon Demons in your server - Currently implemented, plan to add a database so each member of a server can keep track of their demons, also will implement 
 also will implement a cooldown on the command so each user can only summon every so often.
 
