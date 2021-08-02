@@ -32,11 +32,32 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if msg.startswith('!summon'):
-        summoned = summon(message)
-        info = data.demon_info[summoned]
-        lvl = info[1]
-        await message.channel.send('You Summoned a level ' + str(lvl) + ' ' + summoned + '!')
+    if msg.startswith('!'):
+        command = msg[1:]
+        if command.startswith('summon'):
+            summoned = summon(message)
+            info = data.demon_info[summoned]
+            lvl = info[1]
+            img = info[0]
+            if(str(img) != 'no image found'):
+                await message.channel.send(file=discord.File(img))
+            await message.channel.send('You Summoned a level ' + str(lvl) + ' ' + summoned + '!')
+
+        elif command.startswith('info'):
+            name = (command[5:])
+            name = name.title()
+            if(data.demon_info.get(name)):
+                info = data.demon_info[name]
+                if(info[0] != 'no image found'):
+                    await message.channel.send(file=discord.File(info[0]))
+                await message.channel.send(name + ' is a level ' + str(info[1]) + ' demon of the ' + info[3] + ' race. Resistances: '+ info[2])
+            else:
+                await message.channel.send('Demon not found')
+
+
+
+
+
 
 
 client.run(bot_key.key)
