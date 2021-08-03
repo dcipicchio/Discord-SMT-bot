@@ -50,7 +50,7 @@ async def on_message(message):
                 info = data.demon_info[name]
                 if(info[0] != 'no image found'):
                     await message.channel.send(file=discord.File(info[0]))
-                await message.channel.send(name + ' is a level ' + str(info[1]) + ' demon of the ' + info[3] + ' race. Resistances: '+ info[2])
+                await message.channel.send(name + ' is a level ' + str(info[1]) + ' demon of the ' + info[3] + ' race. Resistances -> '+ info[2])
             else:
                 await message.channel.send('Demon not found')
 
