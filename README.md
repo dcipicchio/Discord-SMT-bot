@@ -13,6 +13,8 @@ Skill List - get info about all of the different skills in SMT IV (and other Meg
 
 Fusion Guide - list all of the possible fusion combinations to make each demon in SMT IV
 
+Apps List - list and give infos about the apps in SMT IV
+
 Dungeon Maps/help - provide images of maps and some tips/guidance for dungeons in the game
 
 Boss help - get the boss's stats, weaknesses, and some tips to help defeat them
