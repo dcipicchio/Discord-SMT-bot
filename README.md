@@ -4,8 +4,7 @@ useful information about the game into one place, as well as have features for f
 
 Planned Features/ potential ideas:
 
-Summon Demons in your server - Currently implemented, plan to add a database so each member of a server can keep track of their demons, also will implement 
-also will implement a cooldown on the command so each user can only summon every so often.
+Summon Demons in your server - Currently implemented, Started working to add Database using SQLite3 to track demon compendium of each user. Working on learning SQL, and will learn how to put each user into database and append demon into existing text when a user summons a demon for the first time. Lastly - add command that will print out all demons a user has summoned.
 
 Get info about demons in the game - See things such as the level, weaknesses/resistances, etc in the server. Implemented, plan to add things like base stats, starting skills, etc.
 
