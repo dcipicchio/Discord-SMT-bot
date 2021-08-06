@@ -1,4 +1,4 @@
-# image path, level, resistances, demon race
+#  image path, level, resistances, demon race
 demon_info = {
     'Lham Dearg': ['img/lham_dearg.jpg', 1, 'weak: ice, resist: gun and phys', 'Jaki'],
     'Centaur': ['img/centaur.jpg', 1, 'weak: elec, resist: gun, null: ice', 'Yoma'],
