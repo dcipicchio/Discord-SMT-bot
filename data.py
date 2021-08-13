@@ -1,4 +1,4 @@
-#  image path, level, resistances, demon race
+# image path, level, resistances, demon race
 demon_info = {
     'Lham Dearg': ['img/lham_dearg.jpg', 1, 'weak: ice, resist: gun and phys', 'Jaki'],
     'Centaur': ['img/centaur.jpg', 1, 'weak: elec, resist: gun, null: ice', 'Yoma'],
@@ -443,4 +443,22 @@ demon_info = {
     'Mother Harlot': ['img/mother_harlot.jpg', 93, 'weak: force, null: phys, light, and darkness, absorb: elec', 'Fiend'],
     'Mara': ['img/mara.jpg', 94, 'weak: ice, null: light and darkness, absorb: gun and elec', 'Tyrant'],
     'Demiurge': ['img/demiurge.jpg', 95, 'resist: fire, ice, elec, and force, null: light and darkness', 'Vile']
+}
+
+quests = {
+    'Main Quests': {
+        #Includes the demons you can encounter, gives walkthrough description, and whether the class is on the law or chaos path when applicable.
+        'Prologue': ['No Demons Encountered', """During the vision starting the game move towards the beacons of light to meet Walter and Jonathan.
+                    Next, talk to the Slant Eyed Man in Luxuror District 1 to get on the path to the Rite. Head to Naraku's
+                    Entrance to start Training Exercise 1."""],
+        'Training Exercise I': ['Centaur, Napaea, Mokoi, Slime, Lham Dearg, Fuxi, Gryphon, Chagrin, Myrmecolion', """
+        All you have to do for this quest is fight your first demon. When exploring the map, make sure to hit any demons
+        you see with your sword before they are able to hit you so you can go into the fight with an advantage"""],
+        'Training Exercise II': ['Centaur, Napaea, Mokoi, Slime, Lham Dearg, Fuxi, Gryphon, Chagrin, Myrmecolion', """
+        For this training exercise, you need to recruit three demons to your team. First, buy the Scout App from the app
+        menu, then choose the talk option during battles. Try your best to answer their questions correctly, and they'll
+        usually ask for items like Life Stones or ask to take some of your health/MP."""],
+        'Final Training Exercise': ['Centaur, Napaea, Mokoi, Slime, Lham Dearg, Fuxi, Gryphon, Chagrin, Myrmecolion', """
+        """]
+    }
 }

@@ -1,9 +1,8 @@
 import discord
-import requests
-import json
 import random
 import data
 import bot_key
+import sqlite3
 
 client = discord.Client()
 
@@ -21,6 +20,14 @@ def summon(message):
 
 @client.event
 async def on_ready():
+    db = sqlite3.connect('main.sqlite')
+    cursor = db.cursor()
+    cursor.execute('''
+    CREATE TABLE IF NOT EXISTS main(
+    userID text,
+    demons text
+    )
+    ''')
     print('We have logged in as {0.user}'.format(client))
 
 
@@ -38,16 +45,16 @@ async def on_message(message):
             info = data.demon_info[summoned]
             lvl = info[1]
             img = info[0]
-            if str(img) != 'no image found':
+            if(str(img) != 'no image found'):
                 await message.channel.send(file=discord.File(img))
             await message.channel.send('You Summoned a level ' + str(lvl) + ' ' + summoned + '!')
 
         elif command.startswith('info'):
             name = (command[5:])
             name = name.title()
-            if data.demon_info.get(name):
+            if(data.demon_info.get(name)):
                 info = data.demon_info[name]
-                if info[0] != 'no image found':
+                if(info[0] != 'no image found'):
                     await message.channel.send(file=discord.File(info[0]))
                 await message.channel.send(name + ' is a level ' + str(info[1]) + ' demon of the ' + info[3] + ' race. Resistances -> '+ info[2])
             else:
