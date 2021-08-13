@@ -14,8 +14,6 @@ Fusion Guide - list all of the possible fusion combinations to make each demon i
 
 Apps List - list and give infos about the apps in SMT IV
 
-Dungeon Maps/help - provide images of maps and some tips/guidance for dungeons in the game
-
 Boss help - get the boss's stats, weaknesses, and some tips to help defeat them
 
 Alignment - see how different choices will end up affeting your alignment
