@@ -459,6 +459,33 @@ quests = {
         menu, then choose the talk option during battles. Try your best to answer their questions correctly, and they'll
         usually ask for items like Life Stones or ask to take some of your health/MP."""],
         'Final Training Exercise': ['Centaur, Napaea, Mokoi, Slime, Lham Dearg, Fuxi, Gryphon, Chagrin, Myrmecolion', """
-        """]
+        For this quest you need to find an item in the second stratum of Naraku. Purchase the mapper app and head down 
+        to the second floor. The item is in a chest at the southern end of the 2nd statum. Before getting the item,
+        you have to fight Disaster Horde, which is weak to force and light, and nulls darkness."""],
+        'To the Roof': ['No Demons Encountered', 'For this quest, you just need to head to the roof of Mikado Castle'],
+        'To My Fellow Samurai': ['Centaur, Napaea, Mokoi, Slime, Lham Dearg, Fuxi, Gryphon, Chagrin, Myrmecolion',
+                                 """Head to K's Tavern and look at the blackboard to get challenge quests. Head back
+                                 down to Naruku to complete the quests. For 2 of the challenges, you have to collect
+                                 items by fighting specific demons. For the third quest, you need to fight Orthrus
+                                 in the 2nd Stratum. Orthrus is weak to ice, nulls light and darkness, and drains fire.
+                                 Return to K's Tavern to finish all of the challenge quests."""],
+        'A Missing Fellow Samurai': ["""Centaur, Napaea, Mokoi, Slime, Lham Dearg, Fuxi, Gryphon, Chagrin, Myrmecolion, 
+        Melchom, Tangata Manu, Bilwis, Samurai Zombie""", """Head down to the third floor of Naraku. When you go down, 
+        you will have to fight Naga, which is weak to fire, resistant to electricity, and nulls ice, light, 
+        and darkness. Head through the third floor and cross the shallow poision river, and get to the Wendigo boss 
+        fight. Wendigo is weak to fire, and nulls light and darkness. After defeating Wendigo, head through the door
+        to go into Naraku's Domain. Walk until you see a girl, then take the path to her right, taking you to Stephen.
+        Head to the end of the hall to enter the Alraune boss fight. Alraune is also weak to fire and 
+        nulls light and darkness. Exit Naraku after finishing the fight."""],
+        "Let's Eat Breakfast": ['No Demons Encountered', """Head to the bakery in Castle City to continue the story.
+        After the scene here, you can either complete more challenge quests at K's Tavern, or go back to the barracks
+        to continue the story."""],
+        'Find the Survivors': ['Pixie, Dybbuk, Spriggan, Stonka', """You will head to the Kiccigiori Forest after some
+        dialogue. You will look for survivors at the dead ends of the forest, and you will encounter the Strix
+        boss fight. Strix is weak to gun and electricity, and nulls light ice, light, and darkness. After defeating
+        Strix, head deeper into the forest, and head down the path to fight Issachar. Issachar has no weaknesses, and
+        nulls light and darkness. Continue down the path to find the Black Samurai at another dead end. After finishing
+        the quest, head to the Emergency Meeting Ground."""]
+
     }
 }
