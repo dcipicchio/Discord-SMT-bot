@@ -4,7 +4,9 @@ import data
 import bot_key
 import sqlite3
 
-client = discord.Client()
+intents = discord.Intents.default()
+intents.members = True
+client = discord.Client(intents=intents)
 
 file = open("demon_list.txt", "r")
 content = file.read()
@@ -17,18 +19,32 @@ def summon(message):
     choice = random.choice(demons)
     return choice
 
+def users():
+    member_list = []
+    for guild in client.guilds:
+        for member in guild.members:
+            member_list.append(member.name)
+    return member_list
+
 
 @client.event
 async def on_ready():
+    user_list = users()
     db = sqlite3.connect('main.sqlite')
     cursor = db.cursor()
     cursor.execute('''
     CREATE TABLE IF NOT EXISTS main(
     userID text,
-    demons text
+    demons text,
+    UNIQUE(userID)
     )
     ''')
+    for user in user_list:
+        cursor.execute('''INSERT INTO main(userID, demons) VALUES(?, ?)''', (str(user), ''))
+    db.commit()
+    db.close()
     print('We have logged in as {0.user}'.format(client))
+
 
 
 @client.event
@@ -59,11 +75,6 @@ async def on_message(message):
                 await message.channel.send(name + ' is a level ' + str(info[1]) + ' demon of the ' + info[3] + ' race. Resistances -> '+ info[2])
             else:
                 await message.channel.send('Demon not found')
-
-
-
-
-
 
 
 client.run(bot_key.key)
