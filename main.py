@@ -14,6 +14,8 @@ demons = content.splitlines()
 demons = [demon[:-1] for demon in demons]
 file.close()
 
+db = sqlite3.connect('main.sqlite')
+cursor = db.cursor()
 
 def summon(message):
     choice = random.choice(demons)
@@ -30,19 +32,16 @@ def users():
 @client.event
 async def on_ready():
     user_list = users()
-    db = sqlite3.connect('main.sqlite')
-    cursor = db.cursor()
+    demons = "None"
     cursor.execute('''
     CREATE TABLE IF NOT EXISTS main(
-    userID text,
-    demons text,
-    UNIQUE(userID)
+    userID TEXT PRIMARY KEY,
+    demons text
     )
     ''')
     for user in user_list:
-        cursor.execute('''INSERT INTO main(userID, demons) VALUES(?, ?)''', (str(user), ''))
+        cursor.execute('''INSERT OR IGNORE INTO main(userID, demons) VALUES(?, ?)''', (user, demons))
     db.commit()
-    db.close()
     print('We have logged in as {0.user}'.format(client))
 
 
@@ -75,6 +74,13 @@ async def on_message(message):
                 await message.channel.send(name + ' is a level ' + str(info[1]) + ' demon of the ' + info[3] + ' race. Resistances -> '+ info[2])
             else:
                 await message.channel.send('Demon not found')
+
+        elif command.startswith('test'):
+            name = message.author.name
+            cursor.execute('''SELECT demons FROM main WHERE userID = ?''', ('kuzunoha bot test',))
+            print(cursor.fetchone()[0])
+            cursor.execute('''SELECT demons FROM main WHERE userID = ?''', ('Kuzunoha',))
+            print(cursor.fetchone()[0])
 
 
 client.run(bot_key.key)
